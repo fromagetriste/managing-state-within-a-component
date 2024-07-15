@@ -10,7 +10,9 @@ export default function App() {
   });
 
   function spendGiftCard() {
+    // use the setter function of useState, and use prevState as argument (it's returned by default by the setter function, same logic as the event e)
     setGiftCard((prevState) => {
+      // use the spread operator, and then call properties to modify, on va écraser les données sur les propriétés existantes
       return {
         ...prevState,
         text: "Your coupon has been used.",
